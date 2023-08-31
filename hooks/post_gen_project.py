@@ -13,7 +13,10 @@ def create_virtualenv():
 
 def install_dependencies():
     print("Installing dependencies...")
-    subprocess.run(["pip", "install", "pylint", "black"])
+    if platform.system() == "Windows":
+        subprocess.run([".venv\\Scripts\\pip", "install", "pylint", "black"])
+    else:
+        subprocess.run([".venv/bin/pip", "install", "pylint", "black"])
 
 def download_pylintrc():
     print("Downloading .pylintrc from Google Style Guide...")
