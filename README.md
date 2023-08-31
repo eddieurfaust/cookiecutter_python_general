@@ -1,13 +1,13 @@
 # My Python Project Template
 
-This is a [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template to create a new Python project. It sets up a new project with a `.gitignore`, virtual environment, `pylintrc` from the Google Style Guide, and pre-configured settings for VSCode with pylint and black.
+This is a [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for setting up a new Python project. It includes a `.gitignore`, virtual environment, `.pylintrc` based on the Google Style Guide, and pre-configured settings for VSCode with pylint and black.
 
 ## Features
 
-- `.gitignore` setup for Python
+- `.gitignore` configured for Python
 - Virtual environment creation
 - pylint and black installation
-- `pylintrc` setup following Google Style Guide
+- `.pylintrc` configured according to Google Style Guide
 - VSCode settings for Python development
 - Initial Git commit
 
@@ -23,7 +23,7 @@ This is a [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template 
 To generate a new project:
 
 ```bash
-cookiecutter gh:<eddieurfaust>/my_python_template
+cookiecutter gh:eddieurfaust/my_python_template
 ```
 
 or locally:
@@ -32,26 +32,22 @@ or locally:
 cookiecutter path/to/your/my_python_template
 ```
 
-## Post-generation hooks
+## Post-generation Hooks
 
-This template uses post-generation hooks to automate several tasks:
+This template utilizes a single post-generation Python script (`post_gen_project.py`) to automate several tasks:
 
 - Create and activate a virtual environment
 - Install pylint and black
 - Download `pylintrc` from Google Style Guide
 - Initialize a Git repository and make an initial commit
 
-### For Windows users
+### For All Operating Systems
 
-The `post_gen_project.ps1` PowerShell script will be executed. This script also downloads `pylintrc` using `Invoke-WebRequest`.
-
-### For Linux/Mac users
-
-The `post_gen_project.sh` shell script will be executed. This script also downloads `pylintrc` using `wget`.
+The `post_gen_project.py` Python script will be executed, taking care of the tasks mentioned above regardless of your operating system.
 
 ## Customization
 
-You can modify the `cookiecutter.json` to customize the default values for your project.
+You can modify the `cookiecutter.json` to customize default values for your project.
 
 ## Contributing
 
